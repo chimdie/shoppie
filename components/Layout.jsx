@@ -1,18 +1,27 @@
 import React from "react";
-import Navbar from "./Navbar";
 import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import styled from "styled-components"
 
-export const siteTitle = "shopping";
+const Content = styled.div`
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+export const siteTitle = "shoppie";
 
 export default function Layout({ children }) {
   return (
     <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="shoppie website using Next.js" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -23,8 +32,9 @@ export default function Layout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
         <title>{siteTitle}</title>
       </Head>
-      {/* <Navbar /> */}
-      <div>{children}</div>
+      <Navbar />
+      <Content>{children}</Content>
+      <Footer />
     </div>
   );
 }
