@@ -12,7 +12,7 @@ const LayoutContainer = styled.div`
 `;
 
 const Content = styled.div`
-  /* flex: 1; */
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@ export const siteTitle = "shoppie";
 
 export default function Layout({ children }) {
   return (
-    <LayoutContainer className="wrapper">
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="shopping website using Next.js" />
@@ -37,9 +37,11 @@ export default function Layout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
         <title>{siteTitle}</title>
       </Head>
+      <LayoutContainer>
       <Navbar />
       <Content>{children}</Content>
       <Footer />
-    </LayoutContainer>
+      </LayoutContainer>
+    </>
   );
 }

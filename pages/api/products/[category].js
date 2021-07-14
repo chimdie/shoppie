@@ -1,4 +1,4 @@
-import data from "./data.json";
+const data = require("./data.json");
 
 export const getProdCat = (category) => {
   const products = data.filter((prod) => prod.category === category);

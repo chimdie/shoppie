@@ -13,7 +13,7 @@ const Main = styled.div`
 
 const Small = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `;

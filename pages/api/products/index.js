@@ -1,4 +1,4 @@
-import data from "./data.json";
+const data = require("./data.json");
 
 export const getProducts = () => {
   return data;
@@ -13,3 +13,5 @@ export default function handler(req, res) {
     res.status(200).json(products);
   }
 }
+
+

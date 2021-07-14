@@ -17,10 +17,10 @@ const Category = ({ products }) => {
   );
 };
 
-export default Category;
-
 export async function getServerSideProps(ctx) {
   const category = ctx.query.category;
   const products = await getProCat(category);
   return { props: { products } };
 }
+
+export default Category;

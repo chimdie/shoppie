@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useDispatch } from 'react-redux'
+import { addToCart} from '../../redux/cartSlice'
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -31,13 +33,18 @@ const Button = styled.button`
 `;
 
 const ProductCard = ({ product }) => {
+  const dispatch = useDispatch()
+
+  const handleClick = () => {
+    dispatch(addToCart(product))
+  }
   return (
     <Card>
       <Image src={product.image} height={300} width={220} />
       <Title>{product.product}</Title>
       <Category>{product.category}</Category>
       <p>$ {product.price}</p>
-      <Button>Add to Cart</Button>
+      <Button onClick={handleClick}>Add to Cart</Button>
     </Card>
   );
 };
