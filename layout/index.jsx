@@ -39,9 +39,11 @@ export default function Layout({ children }) {
         <title>{siteTitle}</title>
       </Head>
       <GlobalStyle />
-      <Navbar />
-      <Content>{children}</Content>
-      <Footer />
+      <LayoutContainer>
+        <Navbar />
+        <Content>{children}</Content>
+        <Footer />
+      </LayoutContainer>
     </>
   );
 }

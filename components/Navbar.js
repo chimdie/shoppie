@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo>
-        <Link>shoppie</Link>
+        <Link>{siteTitle}</Link>
       </Logo>
       <LinkWrapper>
         <NavLink>

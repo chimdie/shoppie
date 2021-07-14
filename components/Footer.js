@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { siteTitle } from "../layout";
 import styled from "styled-components";
 
@@ -9,11 +8,6 @@ const Content = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const Logo = styled.span`
-  height: 1em;
-  margin-left: 0.5rem;
 `;
 
 const Footer = () => {
