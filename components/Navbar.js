@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { siteTitle } from './Layout'
+import { siteTitle } from '../layout'
 
 const Nav = styled.nav`
   display: flex;
@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo>
-          <Link>shoppie</Link>
+        <Link>shoppie</Link>
       </Logo>
       <LinkWrapper>
         <NavLink>

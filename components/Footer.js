@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { siteTitle } from "./Layout";
+import { siteTitle } from "../layout";
 import styled from "styled-components";
 
 const Content = styled.footer`
