@@ -5,11 +5,15 @@ import styled from "styled-components";
 
 const Main = styled.div`
   padding: 0 2rem;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
 `
 
 const Small = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
 `;

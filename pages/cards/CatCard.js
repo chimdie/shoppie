@@ -50,11 +50,12 @@ const CatCard = ({ img, name }) => {
       <ImgWrapper>
         <Image src={img} alt="cat" width={300} height={150} />
       </ImgWrapper>
-      {/* <Link href={`/category`}></Link> */}
-      <Info>
-        <h3>{name}</h3>
-        <h6>shop now</h6>
-      </Info>
+      <Link href={`/category/${name.toLowerCase()}`}>
+        <Info>
+          <h3>{name}</h3>
+          <h6>shop now</h6>
+        </Info>
+      </Link>
     </Card>
   );
 };
