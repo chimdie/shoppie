@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
   *,*::before, *::after {
     margin: 0;
     padding: 0;
@@ -9,11 +10,20 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body{
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
   }
 
   a{
     text-decoration: none;
+  }
+
+  .wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 `;
 

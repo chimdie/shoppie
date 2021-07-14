@@ -1,5 +1,5 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
 import GlobalStyle from "../styles/globals";
 
 function MyApp({ Component, pageProps }) {
@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <GlobalStyle />
       <Component {...pageProps} />
-    </Layout> 
+    </Layout>
   );
 }
 

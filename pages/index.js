@@ -1,76 +1,37 @@
-import Layout from '../components/Layout'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import styled from 'styled-components'
-
+import Layout from "../components/Layout";
+import CatCard from "../pages/cards/CatCard";
+import Image from "next/image";
+import styled from "styled-components";
 
 const Main = styled.div`
-padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 2rem;
 `
+
+const Small = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Large = styled(Small)`
+/* transform: scale(1.1, 1) */
+`;
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </Main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
-  )
+    <Main>
+      <Small>
+        <CatCard img="https://imgur.com/uKQqsuA.png" name="Xbox" />
+        <CatCard img="https://imgur.com/3Y1DLYC.png" name="PS5" />
+        <CatCard img="https://imgur.com/Dm212HS.png" name="Switch" />
+      </Small>
+      <Large>
+        <CatCard img="https://imgur.com/qb6IW1f.png" name="PC" />
+        <CatCard img="https://imgur.com/HsUfuRU.png" name="Accessories" />
+      </Large>
+    </Main>
+  );
 }
 
-Home.Layout = Layout
+Home.Layout = Layout;

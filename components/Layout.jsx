@@ -2,23 +2,28 @@ import React from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import styled from "styled-components"
+import styled from "styled-components";
 
-const Content = styled.div`
-  min-height: 100vh;
-  padding: 0 0.5rem;
+const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  min-height: 100vh;
+`;
+
+const Content = styled.div`
+  /* flex: 1; */
+  display: flex;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const siteTitle = "shoppie";
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <LayoutContainer className="wrapper">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="shoppie website using Next.js" />
@@ -35,6 +40,6 @@ export default function Layout({ children }) {
       <Navbar />
       <Content>{children}</Content>
       <Footer />
-    </div>
+    </LayoutContainer>
   );
 }

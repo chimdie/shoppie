@@ -26,6 +26,7 @@ const NavLink = styled.li`
 
 const Link = styled.a`
   color: black;
+  font-size: 1rem;
   text-decoration: none;
 
   &:hover {

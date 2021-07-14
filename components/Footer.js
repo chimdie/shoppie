@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { siteTitle } from "./Layout";
 import styled from "styled-components";
 
 const Content = styled.footer`
@@ -16,20 +17,7 @@ const Logo = styled.span`
 `;
 
 const Footer = () => {
-  return (
-    <Content>
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by{" "}
-        <Logo>
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </Logo>
-      </a>
-    </Content>
-  );
+  return <Content>Powered by {siteTitle}</Content>;
 };
 
 export default Footer;
