@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
-import CatCard from "../pages/cards/CatCard";
+import Layout from "../layout";
+import CatCard from "./cards/CatCard";
 import Image from "next/image";
 import styled from "styled-components";
 
