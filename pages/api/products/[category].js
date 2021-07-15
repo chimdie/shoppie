@@ -3,7 +3,7 @@ const data = require('./data.json')
 
 export const getProdCat = (category) => {
   const products = data.filter((prod) => prod.category === category);
-  console.log({ cat: req.query, products })
+  // console.log({ cat: req.query, products })
   return products;
 };
 

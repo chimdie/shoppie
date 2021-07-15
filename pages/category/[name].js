@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import ProdCard from "../cards/ProdCard";
+import Layout from "../../layout";
+
 // import { getProCat } from "../api/products/[category]";
 import { Container, Cards, Title } from "../../layout/layout.style";
 
@@ -17,6 +19,11 @@ const Category = ({ products }) => {
   );
 };
 
+Category.getLayout = (Category) => (
+    <Layout>
+        {Category}
+    </Layout>
+)
 export default Category;
 
 // export async function getServerSideProps(ctx) {

@@ -21,5 +21,6 @@ export async function getStaticProps() {
   return { props: { products } };
 }
 
-Shop.Layout = Layout;
+Shop.getLayout = (Shop) => <Layout>{Shop}</Layout>;
+
 export default Shop;
