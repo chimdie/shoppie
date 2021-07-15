@@ -38,4 +38,8 @@ export default function Home() {
   );
 }
 
-Home.Layout = Layout;
+Home.getLayout = (Home) => (
+  <Layout>
+    {Home}
+  </Layout>
+)

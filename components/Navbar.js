@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { siteTitle } from '../layout'
+// import { siteTitle } from '../layout'
 
 const Nav = styled.nav`
   display: flex;

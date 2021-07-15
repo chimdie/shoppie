@@ -13,7 +13,7 @@ const Title = styled.h2`
 
 const Cards = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
   gap: 2.5rem 1rem;
   place-items: center;
 `;
