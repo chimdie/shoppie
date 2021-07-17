@@ -24,7 +24,7 @@ export const siteTitle = "shoppie";
 
 export default function Layout({ children }) {
   return (
-    <React.Fragment>
+    <LayoutContainer className='container'>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="shopping website using Next.js" />
@@ -40,8 +40,8 @@ export default function Layout({ children }) {
       </Head>
       <GlobalStyle />
       <Navbar />
-      <Content>{children}</Content>
+      <Content className='content'>{children}</Content>
       <Footer />
-    </React.Fragment>
+    </LayoutContainer>
   );
 }
