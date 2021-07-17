@@ -21,19 +21,18 @@ const Info = styled.div`
 const Card = styled.div`
   position: relative;
   /* flex: 1 1 auto; */
+  flex: 1 1 1;
   margin: 0.5rem;
-  border: 1px solid red;
-  overflow: hidden;
+  box-shadow: 0 2px 4px 2px #e1eaea;
+  margin: 1rem;
 
   &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 2px 4px 2px grey;
     transition: all 500ms cubic-bezier(0.14, 0.96, 0.91, 0.6);
-  }
 
-  ${Info}:hover {
-    border: 1px solid red;
-    opacity: 0.5;
+    ${Info} {
+      opacity: 0.5;
+      border: 1px solid red;
+    }
   }
 `;
 

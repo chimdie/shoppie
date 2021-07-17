@@ -4,10 +4,9 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Main = styled.div`
-  padding: 0 2rem;
+  padding: 0 1rem;
   /* display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column; */
 `
 
