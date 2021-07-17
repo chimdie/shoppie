@@ -4,11 +4,12 @@ import styled from "styled-components";
 
 const Info = styled.div`
   position: absolute;
+  text-align: center;
+  background: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
   top: 70%;
   left: 50%;
-  background: white;
-  padding: 0.5rem 1.5rem;
-  text-align: center;
   transform: translate(-50%, -50%);
   opacity: 0.8;
   cursor: pointer;
@@ -20,28 +21,26 @@ const Info = styled.div`
 
 const Card = styled.div`
   position: relative;
-  /* flex: 1 1 auto; */
-  flex: 1 1 1;
-  margin: 0.5rem;
-  box-shadow: 0 2px 4px 2px #e1eaea;
+  background: transparent;
   margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px 2px #e1eaea;
+  overflow: hidden;
 
   &:hover {
+    transform: scale(1.1);
     transition: all 500ms cubic-bezier(0.14, 0.96, 0.91, 0.6);
 
     ${Info} {
       opacity: 0.5;
-      border: 1px solid red;
     }
   }
 `;
 
 const ImgWrapper = styled.div`
-  object-fit: cover;
   display: block;
+  object-fit: cover;
 `;
-
-const Name = styled.h3``;
 
 const CatCard = ({ img, name }) => {
   return (

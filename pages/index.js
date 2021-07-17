@@ -1,38 +1,32 @@
 import Layout from "../layout";
 import CatCard from "./cards/CatCard";
-import Image from "next/image";
 import styled from "styled-components";
 
 const Main = styled.div`
-  padding: 0 1rem;
-  /* display: flex;
+  display: flex;
   align-items: center;
-  flex-direction: column; */
+  flex-direction: column;
 `
 
-const Small = styled.div`
+const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `;
 
-const Large = styled(Small)`
-/* transform: scale(1.1, 1) */
-`;
-
 export default function Home() {
   return (
-    <Main>
-      <Small>
+    <Main className='home'>
+      <Row>
+        <CatCard img="https://imgur.com/Dm212HS.png" name="pad" />
         <CatCard img="https://imgur.com/uKQqsuA.png" name="Xbox" />
         <CatCard img="https://imgur.com/3Y1DLYC.png" name="PS5" />
-        <CatCard img="https://imgur.com/Dm212HS.png" name="Switch" />
-      </Small>
-      <Large>
+      </Row>
+      <Row>
         <CatCard img="https://imgur.com/qb6IW1f.png" name="PC" />
         <CatCard img="https://imgur.com/HsUfuRU.png" name="Accessories" />
-      </Large>
+      </Row>
     </Main>
   );
 }
