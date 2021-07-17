@@ -19,11 +19,8 @@ const Category = ({ products }) => {
   );
 };
 
-Category.getLayout = (Category) => (
-    <Layout>
-        {Category}
-    </Layout>
-)
+Category.getLayout = (Category) => <Layout>{Category}</Layout>;
+
 export default Category;
 
 // export async function getServerSideProps(ctx) {
@@ -34,7 +31,6 @@ export default Category;
 
 export async function getServerSideProps({ req, query }) {
   // Fetch data from external API
-  // console.log("context : :", Object.keys(req));
   let products = await fetch(
     `http://${req.headers.host}/api/products?q=${query.name}`
   )
@@ -45,7 +41,7 @@ export async function getServerSideProps({ req, query }) {
       return res.json(); //we only get here if there is no error
     })
     .then(function (data) {
-      console.log({ data });
+      // console.log({ data });
       return data;
     })
     .catch((err) => {
