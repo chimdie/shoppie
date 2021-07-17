@@ -1,7 +1,8 @@
 import styled from "styled-components";
-// import { siteTitle } from '../layout'
+import { siteTitle } from "../layout";
+import Link from "next/link";
 
-const Nav = styled.nav`
+const Nav = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,16 +22,16 @@ const LinkWrapper = styled.ul`
 const NavLink = styled.li`
   list-style: none;
   margin: 0 0.75rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 `;
 
-const Link = styled.a`
+const StyledLink = styled.a`
   color: black;
   font-size: 1rem;
   text-decoration: none;
 
   &:hover {
-    color: #f9826c;
+    color:  hsl(30, 100%, 50%);;
     cursor: pointer;
   }
 `;
@@ -39,17 +40,21 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo>
-        <Link>{siteTitle}</Link>
+      <Link href='/' passHref>
+        <StyledLink>{siteTitle}</StyledLink>
+      </Link>
       </Logo>
       <LinkWrapper>
         <NavLink>
-          <Link>home</Link>
+        <Link href='/' passHref>
+        <StyledLink>home</StyledLink>
+      </Link>
         </NavLink>
         <NavLink>
-          <Link>shop</Link>
+          <StyledLink>shop</StyledLink>
         </NavLink>
         <NavLink>
-          <Link>cart</Link>
+          <StyledLink>cart</StyledLink>
         </NavLink>
       </LinkWrapper>
     </Nav>
