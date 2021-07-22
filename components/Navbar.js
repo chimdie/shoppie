@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { siteTitle } from "../layout";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import { siteTitle } from "../layout";
+import styled from "styled-components";
 
 const Nav = styled.div`
   display: flex;
@@ -31,34 +32,45 @@ const StyledLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color:  hsl(30, 100%, 50%);;
+    color: hsl(30, 100%, 50%);
     cursor: pointer;
   }
 `;
 
 const Navbar = () => {
+  const cart = useSelector((state) => state.cart);
+
+  const getItemsCount = () => {
+    return cart.reduce((accumulator, item) => accumulator + item.quantity, 0);
+  };
   return (
     <Nav>
       <Logo>
-      <Link href='/' passHref>
-        <StyledLink>{siteTitle}</StyledLink>
-      </Link>
+        <Link href="/" passHref>
+          <StyledLink>{siteTitle}</StyledLink>
+        </Link>
       </Logo>
       <LinkWrapper>
         <NavLink>
-        <Link href='/' passHref>
-        <StyledLink>home</StyledLink>
-      </Link>
+          <Link href="/" passHref>
+            <StyledLink>home</StyledLink>
+          </Link>
         </NavLink>
         <NavLink>
-          <StyledLink>shop</StyledLink>
+          <Link href="/shop" passHref>
+            <StyledLink>shop</StyledLink>
+          </Link>
         </NavLink>
         <NavLink>
-          <StyledLink>cart</StyledLink>
+          <Link href="/cart" passHref>
+            <StyledLink>cart ({getItemsCount()})</StyledLink>
+          </Link>
         </NavLink>
       </LinkWrapper>
     </Nav>
   );
 };
+
+// Navbar.getLayout = (Navbar) => <Layout>{Navbar}</Layout>;
 
 export default Navbar;
