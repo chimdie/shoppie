@@ -24,10 +24,11 @@ export const siteTitle = "shoppie";
 
 export default function Layout({ children }) {
   return (
-    <LayoutContainer className='container'>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="shopping website using Next.js" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -38,10 +39,12 @@ export default function Layout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
         <title>{siteTitle}</title>
       </Head>
-      <GlobalStyle />
-      <Navbar />
-      <Content className='content'>{children}</Content>
-      <Footer />
-    </LayoutContainer>
+      <LayoutContainer className="container">
+        <GlobalStyle />
+        <Navbar />
+        <Content className="content">{children}</Content>
+        <Footer />
+      </LayoutContainer>
+    </>
   );
 }
