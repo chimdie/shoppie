@@ -67,6 +67,7 @@ const Cart = () => {
   const remove = () => {
     dispatch(deleteFromCart(item.id));
   };
+
   const getTotalPrice = () => {
     return cart.reduce(
       (accumulator, item) => accumulator + item.quantity * item.price,
@@ -112,3 +113,5 @@ const Cart = () => {
     </Container>
   );
 };
+
+export default Cart;
