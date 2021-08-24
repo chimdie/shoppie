@@ -43,6 +43,7 @@ const Navbar = () => {
   const getItemsCount = () => {
     return cart.reduce((accumulator, item) => accumulator + item.quantity, 0);
   };
+  
   return (
     <Nav>
       <Logo>
