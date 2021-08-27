@@ -1,12 +1,13 @@
 import Image from "next/image";
-import { useDispatch } from 'react-redux'
-import { addToCart} from '../../redux/cartSlice'
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
 import styled from "styled-components";
 
 const Card = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const Title = styled.h4`
   font-size: 1rem;
   font-weight: 600;
@@ -33,11 +34,11 @@ const Button = styled.button`
 `;
 
 const ProductCard = ({ product }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(addToCart(product))
-  }
+    dispatch(addToCart(product));
+  };
   return (
     <Card>
       <Image src={product.image} height={300} width={220} />
