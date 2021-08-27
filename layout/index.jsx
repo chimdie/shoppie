@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GlobalStyle from "../styles/globals";
 
@@ -39,10 +38,9 @@ export default function Layout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
         <title>{siteTitle}</title>
       </Head>
-      <LayoutContainer className="container">
+      <LayoutContainer>
         <GlobalStyle />
-        <Navbar />
-        <Content className="content">{children}</Content>
+        <Content>{children}</Content>
         <Footer />
       </LayoutContainer>
     </>
